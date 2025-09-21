@@ -5,7 +5,6 @@ class Sparkonto extends Konto {
 
     @Override
     protected boolean kannAbheben(int betrag) {
-        // Keine Überziehung erlaubt
         return getKontostand() >= betrag;
     }
 }

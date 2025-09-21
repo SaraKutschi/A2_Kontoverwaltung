@@ -1,5 +1,5 @@
 class Kreditkonto extends Konto {
-    private final int kreditlimit; // wie weit ins Minus erlaubt
+    private final int kreditlimit;
 
     public Kreditkonto(String kontoinhaber, int startguthaben, int kreditlimit) {
         super(kontoinhaber, startguthaben, "Kreditkonto");
@@ -8,7 +8,6 @@ class Kreditkonto extends Konto {
 
     @Override
     protected boolean kannAbheben(int betrag) {
-        // Darf bis -kreditlimit gehen
         return getKontostand() - betrag >= -kreditlimit;
     }
 

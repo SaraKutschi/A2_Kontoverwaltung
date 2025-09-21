@@ -1,17 +1,17 @@
 abstract class Konto {
-    private static int NEXT_KONTO_NR = 1;
+    private static int nextKontoNr = 1;
 
     private String kontoinhaber;
     private final int kontonummer;
     private final int bankleitzahl;
-    private int kontostand;           // in EUR (vereinfachend als int)
+    private int kontostand;
     private final String kontoart;
 
     protected Konto(String kontoinhaber, int startguthaben, String kontoart) {
         this.kontoinhaber = kontoinhaber;
         this.kontostand = Math.max(0, startguthaben);
         this.kontoart = kontoart;
-        this.kontonummer = NEXT_KONTO_NR++;
+        this.kontonummer = nextKontoNr++;
         this.bankleitzahl = 12000;    // Dummy-BLZ für Demo
     }
 
@@ -33,7 +33,7 @@ abstract class Konto {
             kontostand -= auszahlung;
             System.out.println(auszahlung + " EUR abgehoben. Neuer Kontostand: " + kontostand + " EUR");
         } else {
-            System.out.println("Abhebung nicht möglich (Deckung/Limit).");
+            System.out.println("Abhebung nicht möglich.");
         }
     }
 
@@ -50,7 +50,6 @@ abstract class Konto {
         System.out.println("-------------------------------------------------");
     }
 
-    // Getter/Setter (minimales Set)
     public int getKontostand() { return kontostand; }
     protected void setKontostand(int v) { kontostand = v; }
     public String getKontoart() { return kontoart; }
