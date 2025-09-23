@@ -3,7 +3,7 @@ Author: Sara Kutschi <br>
 LBS Eibiswald | 2aAPC
 
 Ein kleines Java-Konsolenprojekt zur Verwaltung verschiedener **Kontenarten**: *Girokonto*, *Sparkonto* und *Kreditkonto*.  
-Du kannst Konten anlegen, Ein- und Auszahlungen durchführen, Kontoauszüge ausgeben und alle Konten auflisten.
+Man kannst Konten anlegen, Ein- und Auszahlungen durchführen, Kontoauszüge ausgeben und alle Konten auflisten.
 
 ---
 
